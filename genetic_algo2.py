@@ -29,8 +29,8 @@ def make_mutants (parent, num_mutants, step_size):
     mutants=[]
     for i in range (num_mutants):
         mutants.append([parent[0]+ np.random.normal (0, step_size),parent[1]+np.random.normal(0,step_size)])
-        mutants.append(parent)
-        return mutants
+    mutants.append(parent)
+    return mutants
     
     
 data_in=pd.read_csv('LineOfFit.csv', index_col=0)
